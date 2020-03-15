@@ -1,11 +1,13 @@
+import { Server } from "hapi";
+
 module.exports = {
   name: 'home',
   version: '1.0.0',
-  register: async function(server, options) {
+  register: async function(server: Server) {
     server.route({
       method: 'GET',
       path: '/',
-      handler: function (request, h) {
+      handler: function () {
         return 'hello world';
       }
     })

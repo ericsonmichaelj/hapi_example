@@ -1,13 +1,13 @@
-const Hapi = require('hapi');
+import { Server } from 'hapi';
 
 const init = async () => {
-  const server = Hapi.server({
+  const server = new Server({
     port: 3000,
     host: 'localhost'
   })
+  await server.register([require('./controller/home'), require('./controller/user') ])
   await server.start();
   console.log('server started at localhost:3000')
-  await server.register([require('./controller/home'), require('./controller/user') ])
 }
 
 process.on('unhandledRejection', (err) => {

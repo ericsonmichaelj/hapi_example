@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/hapi": "^18.0.3",
     "hapi": "^18.1.0",
     "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.3"
   }
